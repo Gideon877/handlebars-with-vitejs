@@ -26,7 +26,8 @@
   "scripts": {
     "test": "",
     "dev": "vite",
-    "deploy": "vite build"
+    "deploy": "vite build",
+    "build": "vite build"
   },
   "devDependencies": {
     "vite": "^4.3.8",
