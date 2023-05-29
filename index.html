@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Week day</th>
+                <th>Apple sales</th>
+                <th>Orange sales</th>
+            </tr>
+        </thead>
+        {{#each fruitSales}}
+        <tr>
+            <td>{{day}}</td>
+            <td>{{apples}}</td>
+            <td>{{oranges}}</td>
+        </tr>
+        {{/each}}
+        <table>
+</body>
+</html>
+
+<!-- https://github.com/codex-academy/vite-handlebars-101/blob/main/readme.md?plain=1#LL60C48-L60C48 -->
+
