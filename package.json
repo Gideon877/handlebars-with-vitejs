@@ -30,6 +30,7 @@
     "build": "vite build"
   },
   "devDependencies": {
+    "handlebars": "^4.7.7",
     "vite": "^4.3.8",
     "vite-plugin-handlebars": "^1.6.0"
   }
