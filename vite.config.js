@@ -17,7 +17,10 @@ export default {
         { day: "Thursday", apples: 7, oranges: 45 },
       ]
     },
-    partialDirectory: resolve(__dirname, 'src/partials'),
+    // partialDirectory: resolve(__dirname, 'src/partials'),
+    build: {
+      outDir: 'dist',
+    },
     // Add any additional options or configurations you need
   })],
 };
