@@ -28,27 +28,17 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-        
       - name: Install dependencies
         run: yarn install
       - name: Build
         run: yarn build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-        with:
-          enablement: 'on'
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: dist
-          path: './dist'
+          path: ./dist
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
