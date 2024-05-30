@@ -6,6 +6,7 @@ export default {
     context: {
       title: "Hello, this is some text",
       show: false,
+      proPicture: "_KSM1317.jpg",
       fruits: [
         "apples",
         "oranges",
